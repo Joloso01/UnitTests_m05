@@ -99,12 +99,14 @@ class LinkedList
     }
 
     public String toString(){
-        head.getData();
-        for (int i = 0; i < numNodes-1; i++) {
-            return head.getData()+" => "+head.next.getData();
+        Node n = head;
+        String s =n.data.toString();
+        while (n.next != null){
+            n=n.next;
+            s += " => "+n.data.toString();
         }
         
-        return "";
+        return s;
     }
 
     public int getSize()
